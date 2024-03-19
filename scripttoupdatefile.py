@@ -10,12 +10,12 @@ coco_file_path = "_updtannotations.coco.json"
 with open(coco_file_path, "r") as file:
     coco_data = json.load(file)
 
-# Prepend base URL to each image filename
+# Add coco_url field to each image entry
 for image in coco_data["images"]:
-    image["file_name"] = base_url + image["file_name"]
+    image["coco_url"] = base_url + image["file_name"]
 
 # Write updated COCO annotation file
 with open(coco_file_path, "w") as file:
     json.dump(coco_data, file, indent=4)
 
-print("Image URLs updated successfully.")
+print("coco_url added successfully.")
