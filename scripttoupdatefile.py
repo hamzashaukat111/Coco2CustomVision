@@ -1,10 +1,10 @@
 import json
 
 # Define base URL of your blob storage container
-base_url = "https://softdeskstorage.blob.core.windows.net/augmenteddatacont/"
-
+# base_url = "https://softdeskstorage.blob.core.windows.net/augmenteddatacont/"
+base_url = "https://storagecvisionsouthcent.blob.core.windows.net/signlangcontainer/"
 # Path to your COCO annotation file
-coco_file_path = "_Augmentedannotations.coco.json"
+coco_file_path = "_Augannotations.coco.json"
 
 # Load COCO annotation file
 with open(coco_file_path, "r") as file:
